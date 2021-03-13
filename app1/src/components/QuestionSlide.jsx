@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import styles from "../assets/QuestionStyle.module.css";
+// import styles from "../assets/QuestionStyle.module.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,11 +22,28 @@ function QuestionSlide() {
     color: "#fff",
     background: "#3ab60b",
   };
-  const [value, setValue] = React.useState("female");
+  const [answer1, setAnswer1] = React.useState("question1");
+  const [answer2, setAnswer2] = React.useState("question1");
+  const [answer3, setAnswer3] = React.useState("question1");
+  const [answer4, setAnswer4] = React.useState("question1");
+  const [answer5, setAnswer5] = React.useState("question1");
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange1 = (event) => {
+    setAnswer1(event.target.value);
   };
+  const handleChange2 = (event) => {
+    setAnswer2(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setAnswer3(event.target.value);
+  };
+  const handleChange4 = (event) => {
+    setAnswer4(event.target.value);
+  };
+  const handleChange5 = (event) => {
+    setAnswer5(event.target.value);
+  };
+
   return (
     <Slider {...settings}>
       <div>
@@ -35,8 +52,8 @@ function QuestionSlide() {
           <RadioGroup
             aria-label="question1"
             name="question1"
-            value={value}
-            onChange={handleChange}
+            value={answer1}
+            onChange={handleChange1}
           >
             <FormControlLabel value="はい" control={<Radio />} label="はい" />
             <FormControlLabel
@@ -53,8 +70,8 @@ function QuestionSlide() {
           <RadioGroup
             aria-label="question2"
             name="question2"
-            value={value}
-            onChange={handleChange}
+            value={answer2}
+            onChange={handleChange2}
           >
             <FormControlLabel value="はい" control={<Radio />} label="はい" />
             <FormControlLabel
@@ -71,8 +88,8 @@ function QuestionSlide() {
           <RadioGroup
             aria-label="question3"
             name="question3"
-            value={value}
-            onChange={handleChange}
+            value={answer3}
+            onChange={handleChange3}
           >
             <FormControlLabel value="はい" control={<Radio />} label="はい" />
             <FormControlLabel
@@ -89,8 +106,8 @@ function QuestionSlide() {
           <RadioGroup
             aria-label="question4"
             name="question4"
-            value={value}
-            onChange={handleChange}
+            value={answer4}
+            onChange={handleChange4}
           >
             <FormControlLabel value="はい" control={<Radio />} label="はい" />
             <FormControlLabel
@@ -107,8 +124,8 @@ function QuestionSlide() {
           <RadioGroup
             aria-label="question5"
             name="question5"
-            value={value}
-            onChange={handleChange}
+            value={answer5}
+            onChange={handleChange5}
           >
             <FormControlLabel value="はい" control={<Radio />} label="はい" />
             <FormControlLabel
