@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+.resultbButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
