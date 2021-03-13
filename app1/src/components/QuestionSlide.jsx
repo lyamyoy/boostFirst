@@ -22,11 +22,11 @@ function QuestionSlide() {
     color: "#fff",
     background: "#3ab60b",
   };
-  const [answer1, setAnswer1] = React.useState("question1");
-  const [answer2, setAnswer2] = React.useState("question1");
-  const [answer3, setAnswer3] = React.useState("question1");
-  const [answer4, setAnswer4] = React.useState("question1");
-  const [answer5, setAnswer5] = React.useState("question1");
+  const [answer1, setAnswer1] = React.useState(false);
+  const [answer2, setAnswer2] = React.useState(false);
+  const [answer3, setAnswer3] = React.useState(false);
+  const [answer4, setAnswer4] = React.useState(false);
+  const [answer5, setAnswer5] = React.useState(false);
 
   const handleChange1 = (event) => {
     setAnswer1(event.target.value);
