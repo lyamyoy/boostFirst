@@ -1,5 +1,5 @@
 import React from "react";
-import Movie from "./movie.json";
+import Movie from "../movie.json";
 
 export default function Youtube() {
   return (

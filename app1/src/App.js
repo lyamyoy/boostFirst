@@ -1,12 +1,18 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import Youtube from "./Youtube";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import YoutubePage from "./pages/YoutubePage";
+import QuestionPage from "./pages/QuestionPage";
 
 function App() {
   return (
-    <div className="App">
-      <Youtube></Youtube>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" />
+        <Route path="/question" component={QuestionPage} />
+        <Route path="/youtube" component={YoutubePage} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
