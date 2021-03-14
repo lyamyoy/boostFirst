@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.picture{
+  text-align: center;
+}
+
+img{
+  margin: 20px;
+  width: 480px;
+  height: 400px;
+}
+
+.comment {
+  font-family: Hannotate SC;
+  font-size: 50px;
+}
