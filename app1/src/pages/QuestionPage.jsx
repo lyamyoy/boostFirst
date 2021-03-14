@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 // import { Redirect } from "react-router-dom";
 // import QuestionSlide from "../components/QuestionSlide";
 import { Button } from "@material-ui/core";
-import styles from "../assets/QuestionStyle.module.css";
 import Slider from "react-slick";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import styles from "../assets/QuestionStyle.module.css";
+// import Movie from "../movie.json";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -45,6 +46,18 @@ export default function QuestionPage() {
     return Score;
   }
 
+  // function selectYoutube() {
+  //   if (Score >= 13)
+  //     return "https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1";
+  //   else if (Score >= 10)
+  //     return "https://www.youtube.com/embed/AO8RNNxEAjM?autoplay=1";
+  //   else if (Score >= 7)
+  //     return "https://www.youtube.com/embed/Am1ms5I-o7Y?autoplay=1";
+  //   else if (Score >= 4)
+  //     return "https://www.youtube.com/embed/w07F1IGi6yw?autoplay=1";
+  //   else return "https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1";
+  // }
+
   const handleChange1 = (event) => {
     setAnswer1(event.target.value);
     console.log(answer1);
@@ -63,7 +76,7 @@ export default function QuestionPage() {
   };
   return (
     <div className={styles.QuestionSlide}>
-      <h1>質問</h1>
+      <h1>やる気診断テスト〜Boost〜</h1>
       <Slider {...settings}>
         <div>
           <h1 style={style}>
@@ -187,8 +200,7 @@ export default function QuestionPage() {
           variant="contained"
           color="primary"
           component={Link}
-          to="/youtube"
-          onClick={culSum}
+          to={"/youtube?Score=" + culSum()}
         >
           動画を見る
         </Button>
