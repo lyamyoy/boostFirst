@@ -1,9 +1,6 @@
 import React from "react";
-// import Movie from "../movie.json";
 
 export default function Youtube() {
-  // const { params } = props.match;
-  // const Score = param.Score;
   const param = getUrlQueries();
   const Score = param.Score;
   function getUrlQueries() {
@@ -27,7 +24,7 @@ export default function Youtube() {
   console.log(Score);
   function selectYoutube() {
     if (Score >= 13)
-      return "https://www.youtube.com/embed/ZXsQAXx_ao0?autoplay=1";
+      return "https://www.youtube.com/embed/Gp4EBIbTefI?autoplay=1";
     else if (Score >= 10)
       return "https://www.youtube.com/embed/AO8RNNxEAjM?autoplay=1";
     else if (Score >= 7)

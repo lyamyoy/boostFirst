@@ -7,6 +7,10 @@ h1 {
   align-items: center;
   margin-top: 10%;
 }
+.MuiFormGroup-root {
+  text-align: center;
+}
+
 .MuiFormControlLabel-root {
   display: inline-block;
   width: auto;
